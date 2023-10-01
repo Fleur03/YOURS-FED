@@ -1,0 +1,344 @@
+    :root {
+    --background-color:#E5E5E5 ;
+    --tekstkleur:  #7b7c7c;
+    }
+
+
+    /* Dark & Light mode, de media query betekend dat dat je een kleur prefer mee geeft aan de dark of light modus */
+    @media(prefers-color-scheme:dark) {
+    :root {
+    --background-color: rgb(164, 158, 158);
+    --tekstkleur: black;}
+    }
+
+
+
+    body{
+    background-color: var(--background-color);
+    margin: 0em;
+    padding: 0em;
+    box-sizing: border-box;
+    max-width: 30em;
+    }
+
+    header h1 {
+    text-align: center;
+    margin: 0 auto;
+    line-height: 0;
+    margin-top: 10px;
+    }
+
+
+    /*hamburgermenu*/
+
+    header button {
+    position: absolute;
+    background: none;
+    border: none;
+    top: 1em;
+    margin-left: 15px;
+    }
+
+    header button img{
+    width: 2em;
+    }
+
+    nav{
+    display: none;
+    }
+   
+    nav.menuopen{
+    display: block;
+    }
+
+    ul{
+    list-style-type: none;
+    }
+
+
+
+   /*Typografie*/
+
+    a{
+    text-decoration: none;
+    color: #414343;
+    font-size: 10px;
+    font-family: 'Expletus Sans', cursive;
+    font-family: 'Kanit', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    }
+
+    p{
+        color: var(--tekstkleur);
+    font-family: 'Expletus Sans', cursive;
+    font-family: 'Kanit', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    }
+
+    h1,h2{
+        color: var(--tekstkleur);   
+    
+    font-family: 'Expletus Sans', cursive;
+    font-family: 'Kanit', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    font-size: 25px;
+     }
+
+    .page2 h2{
+    text-align: center;
+    font-size: 22px;
+    padding-right: 10px;
+     }
+
+    .page2 p{
+    text-align: center;
+    padding-right: 10px;
+     }
+
+
+
+     /*Video*/
+
+    video{
+    max-width: 100%;
+    margin-top: 20px;
+        
+    }
+
+
+
+    /*Contactformulier*/
+    form{
+    font-family: 'Expletus Sans', cursive;
+    font-family: 'Kanit', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    max-width: 100%;
+    }
+
+    label{
+    display: block;
+    color: black;
+    margin-left: 10px;
+    }
+
+    form > input {
+    border-color:white ;
+    background-color:#E5E5E5;
+    border-radius: 1em;
+    width: 20em;
+    height: 30px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border-width: 3px;
+    border-style: inset;
+    margin-left: 10px;
+    }
+    
+    label:nth-of-type(3){
+    padding-top: 10px;
+    }
+
+    label:nth-of-type(4),label:nth-of-type(5) {
+    display: inline-flex;
+    font-size: 1em;
+    margin: 0;
+    padding-bottom: 15px;
+    }
+
+    input:nth-of-type(2), input:nth-of-type(3){
+    width: 2em;
+    height: 100%;
+    justify-content: center;
+    }
+
+    input:focus{
+    background-color:white;
+    }
+    
+    select:focus{
+    background-color: white;
+    }
+    
+    textarea:focus{
+    background-color: white;
+    }
+
+    input:nth-last-of-type(2) {
+    border-style: none;
+    padding-top: 5px;
+      
+    }
+    select{
+    border-color:white ;
+    background-color:#E5E5E5;
+    border-radius: 1em;
+    width: 20.5em;
+    height: 40px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border-width: 3px;
+    border-style: inset;
+    margin-left: 10px;
+    }
+
+    input:valid{
+    border: 2px solid green;
+    }
+
+   /* ik heb hier een div gebruikt omdat mijn styling niet werkt op nth-of-type. Dat 
+      komt omdat ik alle forms dezelfde styling heb gegeven. 
+      Door een div te gebruiken kan ik de display flex tool gebruiken.*/ 
+    div{
+    display:flex;
+    font-size: 15px;
+    }    
+
+    div input{
+    width: 20px;
+    }
+
+    /*Submit knop*/
+    form >input:last-of-type{
+    width: 90px;
+    height: 40px;
+    margin-left: 8em;
+    background-color:rgb(198, 189, 183);
+    color: white;
+    border-color: rgb(253, 249, 249);
+    border-width: 5px;
+    border-style:outset;
+    }
+
+    form>input:last-of-type:hover{
+    background-color: rgb(233, 180, 180);
+    animation-name: button;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    transform-origin: 10%;
+    }
+
+    /*Message veld*/
+    textarea{
+    border-color:white ;
+    background-color:#E5E5E5;
+    width: 20em;
+    border-radius: 1em;
+    border-width: 3px;
+    border-style: inset;
+    margin-left: 10px;
+    margin-top: 10px;
+    }
+
+    textarea:valid{
+    border: 2px solid green;
+    }
+
+  
+   
+
+    /*annimaties*/
+
+    @keyframes button{
+    100% {
+    scale: 2;}
+    }
+
+    @keyframes spin {
+    100% {
+    transform: rotate(360deg);}
+    }
+
+
+   /* Afbeeldingen en teksten van pagina 1 */
+
+    main img {
+    margin-bottom: 20px;
+    animation-name: spin;
+    animation-duration: 3s;
+    }
+
+    img{
+    max-width: 100%;
+    }
+
+    img:nth-of-type(1) {
+    margin-top: 15px;
+    }
+    
+    img:nth-of-type(2) {
+    margin-top: 10px;
+    }
+    
+    img:nth-of-type(4) {
+    margin-bottom: 60px;
+    }
+    
+    img:nth-of-type(5) {
+    margin-top: 20px;
+    margin-bottom: 35px;
+    }
+
+    h1, h2,p{
+    padding-left: 10px;
+    max-width: 100%;
+    }
+      
+
+
+    /* Afbeeldingen en tekst van pagina 2 */
+
+    .page2 main img{
+    padding-bottom: 20px;
+    }
+
+    .page2 main img:nth-of-type(2) {
+     margin-bottom: 20px;
+     margin-top: 50px;
+    }
+
+    .page2 h1, h2,p{
+    max-width: 100%;
+    }
+
+    
+    /*Iframe*/ 
+
+    iframe{
+    margin-bottom: 33px;
+    margin-top: 40px;
+    max-width: 100%;
+    }
+
+
+    /* Footer*/
+
+    footer{
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 20px;
+    }
+
+    footer img{
+    margin: 0.5em;
+    height: 30px;
+    width: 30px;
+    }
+
+
+
+
+
+/* Mijn 6 surfplane items:
+
+ 1. Dark light mode
+ 2. Formulier
+ 3. Hover state en focus state
+ 4. Animatie op afbeelding
+ 5. Feedback valid input
+ 6. Micro actie hamburger menu */ 
+
+
+
+     
+       
